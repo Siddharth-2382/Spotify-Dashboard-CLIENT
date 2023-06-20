@@ -77,16 +77,6 @@ function Sidebar() {
                 type={"Artist"}
               />
             ))}
-          {followedArtists &&
-            followedArtists.artists.items.map((artist, index) => (
-              <Playlist
-                key={index}
-                imgSource={artist.images[0].url}
-                coverType={"artist_cover"}
-                name={artist.name}
-                type={"Artist"}
-              />
-            ))}
         </div>
       </div>
     </div>

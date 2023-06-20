@@ -44,7 +44,10 @@ export const getAccessToken = () => {
   }
 
   // If token has expired
-  if (Date.now() - getTokenTimestamp() > EXPIRATION_TIME) {
+  if (
+    getTokenTimestamp() &&
+    Date.now() - getTokenTimestamp() > EXPIRATION_TIME
+  ) {
     console.warn("Access token has expired, refreshing...");
     refreshAccessToken();
   }
@@ -114,8 +117,6 @@ export const getCurrentlyPlayingTrack = () =>
   axios.get("https://api.spotify.com/v1/me/player/currently-playing", {
     headers,
   });
-
-console.log(await getCurrentlyPlayingTrack());
 
 export const getUserInfo = () =>
   axios
