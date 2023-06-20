@@ -31,7 +31,7 @@ function TopOfAllTime(props) {
     <div className="toat_container">
       <div>
         <div className="toat_header">
-          <h3 className="toat_heading">Top Artists of All Time</h3>
+          <h3>Top Artists of All Time</h3>
           <Button buttonName={"see more"} handleClick={handleClick} />
         </div>
         <div>
@@ -50,7 +50,7 @@ function TopOfAllTime(props) {
       </div>
       <div>
         <div className="toat_header">
-          <h3 className="toat_heading">Top Tracks of All Time</h3>
+          <h3>Top Tracks of All Time</h3>
           <Button buttonName={"see more"} handleClick={handleClick} />
         </div>
         <div>

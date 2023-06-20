@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouse,
@@ -27,18 +28,18 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="nav">
-        <a href="/">
+        <Link to="/">
           <span>
             <FontAwesomeIcon icon={faHouse} />
           </span>
           Home
-        </a>
-        <a href="/">
+        </Link>
+        <Link to="/search">
           <span>
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </span>
           Search
-        </a>
+        </Link>
       </div>
       <div className="library">
         <div className="library_container">

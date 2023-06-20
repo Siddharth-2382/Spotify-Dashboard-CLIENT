@@ -118,6 +118,12 @@ export const getCurrentlyPlayingTrack = () =>
     headers,
   });
 
+// Get User's recently played tracks
+export const getRecentlyPlayedTrack = () =>
+  axios.get("https://api.spotify.com/v1/me/player/recently-played", {
+    headers,
+  });
+
 export const getUserInfo = () =>
   axios
     .all([
