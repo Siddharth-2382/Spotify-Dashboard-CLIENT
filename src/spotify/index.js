@@ -124,6 +124,13 @@ export const getRecentlyPlayedTrack = () =>
     headers,
   });
 
+// Get Search Results
+export const getSearchResults = (query) =>
+  axios.get(
+    `https://api.spotify.com/v1/search?q=${query}&type=album%2Cplaylist%2Cshow%2Ctrack%2Cartist%2Cepisode%2Caudiobook&limit=4`,
+    { headers }
+  );
+
 export const getUserInfo = () =>
   axios
     .all([
