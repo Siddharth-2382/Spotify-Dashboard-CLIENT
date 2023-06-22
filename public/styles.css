@@ -337,6 +337,7 @@ a:hover {
 .search_content {
   margin: auto 32px;
   overflow-y: auto;
+  scroll-behavior: smooth;
   height: 84%;
 }
 
@@ -371,12 +372,16 @@ a:hover {
 .playable {
   margin: 7.5%;
   width: 85%;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 8px;
 }
 
 .profile {
   margin: 7.5%;
   width: 85%;
+  aspect-ratio: 1;
+  object-fit: cover;
   border-radius: 50%;
 }
 
