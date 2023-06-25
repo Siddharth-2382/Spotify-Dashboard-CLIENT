@@ -225,12 +225,25 @@ a:hover {
 .playlists {
   margin: 0 10px 10px;
   padding: 10px;
+  background-color: rgba(69, 69, 69, 0);
   border-radius: 8px;
+}
+
+.playlists:hover {
+  background-color: rgba(69, 69, 69, 0.1);
 }
 
 .playlist {
   display: flex;
   align-items: center;
+}
+
+.active {
+  background-color: rgba(69, 69, 69, 0.3);
+}
+
+.active:hover {
+  background-color: rgba(69, 69, 69, 0.4);
 }
 
 /* Music player */
