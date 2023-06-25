@@ -1,22 +1,18 @@
-import React, { useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Playlist(props) {
-  function handleClick(divID) {
-    const playlistsDiv = document.getElementsByClassName("playlists");
-    for (let i = 0; i < playlistsDiv.length; i++) {
-      playlistsDiv[i].classList.remove("active");
-    }
-    const activePlaylist = document.getElementById(divID);
-    activePlaylist.classList.add("active");
-  }
+  const location = useLocation();
 
   return (
     <Link to={`/${props.type.toLowerCase()}/${props.id}`}>
       <div
-        className="playlists"
+        className={`playlists ${
+          location.pathname === `/${props.type.toLowerCase()}/${props.id}`
+            ? "active"
+            : ""
+        }`}
         id={props.id}
-        onClick={() => handleClick(props.id)}
       >
         <div className="playlist">
           <img className={props.coverType} src={props.imgSource} alt="Cover" />
@@ -26,7 +22,7 @@ function Playlist(props) {
                 ? props.name.slice(0, 33) + "..."
                 : props.name}
             </h5>
-            {props.type === "Playlist" ? (
+            {props.type === "Playlists" ? (
               <p>
                 {props.type} • {props.createdBy}
               </p>

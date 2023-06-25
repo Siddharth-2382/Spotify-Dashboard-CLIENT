@@ -131,6 +131,10 @@ export const getSearchResults = (query) =>
     { headers }
   );
 
+// Get info about artist/playlist by ID
+export const getInfoById = (type, id) =>
+  axios.get(`https://api.spotify.com/v1/${type}/${id}`, { headers });
+
 export const getUserInfo = () =>
   axios
     .all([

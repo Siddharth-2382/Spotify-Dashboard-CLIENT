@@ -21,7 +21,6 @@ function Sidebar() {
       const { followedArtists, playlists } = await getUserInfo();
       setFollowedArtists(followedArtists);
       setPlaylists(playlists);
-      console.log(followedArtists);
     };
     catchErrors(fetchData());
   }, []);
@@ -67,7 +66,7 @@ function Sidebar() {
                 coverType={"album_cover"}
                 name={playlist.name}
                 createdBy={playlist.owner.display_name}
-                type={"Playlist"}
+                type={"Playlists"}
               />
             ))}
           {followedArtists &&
@@ -78,7 +77,7 @@ function Sidebar() {
                 imgSource={artist.images[0].url}
                 coverType={"artist_cover"}
                 name={artist.name}
-                type={"Artist"}
+                type={"Artists"}
               />
             ))}
         </div>

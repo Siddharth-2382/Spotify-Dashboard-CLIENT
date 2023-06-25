@@ -409,6 +409,36 @@ a:hover {
   color: #b3b3b3;
 }
 
+/* Expanded Component */
+
+.display_header {
+  padding: 64px 24px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.playlists_img {
+  width: 232px;
+  height: 232px;
+  min-height: 232px;
+  min-width: 232px;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+}
+
+.artists_img {
+  width: 232px;
+  height: 232px;
+  min-height: 232px;
+  min-width: 232px;
+  border-radius: 50%;
+  box-shadow: 0 4px 60px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+
+.display_info {
+  margin-left: 32px;
+}
+
 /* CSS for Tablet */
 @media (min-height: 800px) {
   .library {

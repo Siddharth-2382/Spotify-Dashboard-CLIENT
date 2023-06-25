@@ -4,6 +4,7 @@ import Sidebar from "./Sidebar";
 import Profile from "./Profile";
 import Player from "./Player";
 import Search from "./Search";
+import ExpandedView from "./ExpandedView";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Routes>
           <Route path="/" element={<Profile />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/:type/:id" element={<ExpandedView />} />
         </Routes>
         <Player />
       </BrowserRouter>
