@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import "../app.css";
 import { token } from "../spotify";
 import LoginScreen from "./LoginScreen";
 import Home from "./Home";
