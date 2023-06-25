@@ -21,6 +21,7 @@ function Sidebar() {
       const { followedArtists, playlists } = await getUserInfo();
       setFollowedArtists(followedArtists);
       setPlaylists(playlists);
+      console.log(followedArtists);
     };
     catchErrors(fetchData());
   }, []);
@@ -58,9 +59,10 @@ function Sidebar() {
         </div>
         <div className="playlist_container">
           {playlists &&
-            playlists.items.map((playlist, index) => (
+            playlists.items.map((playlist) => (
               <Playlist
-                key={index}
+                key={playlist.id}
+                id={playlist.id}
                 imgSource={playlist.images[0].url}
                 coverType={"album_cover"}
                 name={playlist.name}
@@ -69,9 +71,10 @@ function Sidebar() {
               />
             ))}
           {followedArtists &&
-            followedArtists.artists.items.map((artist, index) => (
+            followedArtists.artists.items.map((artist) => (
               <Playlist
-                key={index}
+                key={artist.id}
+                id={artist.id}
                 imgSource={artist.images[0].url}
                 coverType={"artist_cover"}
                 name={artist.name}
