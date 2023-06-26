@@ -27,6 +27,12 @@ function Album(props) {
             : props.artistNames && props.artistNames.join(", ")}
         </p>
       </div>
+      {props.expanded && (
+        <>
+          <span className="duration">{props.albumName}</span>
+          <span className="duration">{props.releaseDate}</span>
+        </>
+      )}
       <span className="duration">
         {props.trackDuration && formatDuration(props.trackDuration)}
       </span>

@@ -135,6 +135,12 @@ export const getSearchResults = (query) =>
 export const getInfoById = (type, id) =>
   axios.get(`https://api.spotify.com/v1/${type}/${id}`, { headers });
 
+// Get an Artist's top tracks
+export const getArtistTopTracks = (id) =>
+  axios.get(`https://api.spotify.com/v1/artists/${id}/top-tracks?market=IN`, {
+    headers,
+  });
+
 export const getUserInfo = () =>
   axios
     .all([
