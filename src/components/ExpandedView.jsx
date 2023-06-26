@@ -3,6 +3,8 @@ import { getInfoById } from "../spotify";
 import { useParams } from "react-router-dom";
 import { catchErrors } from "../utils";
 import Spinner from "./Spinner";
+import ExpandedCover from "./ExpandedCover";
+import ExpandedInfo from "./ExpandedInfo";
 
 function ExpandedView() {
   const { type, id } = useParams();
@@ -56,36 +58,9 @@ function ExpandedView() {
           }}
         >
           <div className="display_header">
-            <img className={type + "_img"} src={info.imgSource} alt="cover" />
-            <div className="display_info">
-              <h6>{info.type.toUpperCase()}</h6>
-              <div
-                className="display_header_name"
-                style={{
-                  fontSize:
-                    info.name.length > 17
-                      ? info.name.length < 23
-                        ? "4.5rem"
-                        : "3rem"
-                      : "6rem",
-                  fontWeight: "800",
-                }}
-              >
-                {info.name}
-              </div>
-              <h5>
-                {info.type === "playlist"
-                  ? info.createdBy +
-                    " • " +
-                    info.likes +
-                    " likes • " +
-                    info.totalTracks +
-                    " songs"
-                  : "Genres • " + (info.genres ? info.genres.join(", ") : "")}
-              </h5>
-            </div>
+            <ExpandedCover type={type} imgSource={info.imgSource} />
+            <ExpandedInfo {...info} />
           </div>
-          {console.log(info.tracks[0])}
         </div>
       )}
     </div>
