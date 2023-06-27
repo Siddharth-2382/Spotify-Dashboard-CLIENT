@@ -32,7 +32,6 @@ function Search() {
       itemArray.forEach((item) => {
         tracks.push(item.track);
       });
-    console.log(tracks);
     return tracks;
   };
 
@@ -46,6 +45,7 @@ function Search() {
   function handleSearch(event) {
     searchDivRef.current.scrollTop = 0;
     if (!event.target.value) {
+      window.history.pushState(null, null, "/search/");
       setAlbums();
       setPlaylists();
       setArtists();
@@ -55,6 +55,7 @@ function Search() {
       return;
     }
     const q = encodeURIComponent(event.target.value);
+    window.history.pushState(null, null, q ? `/search/${q}` : "/search/");
 
     async function fetchSearch() {
       const {

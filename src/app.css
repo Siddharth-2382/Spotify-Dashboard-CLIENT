@@ -259,7 +259,7 @@ a:hover {
 
 .album {
   display: grid;
-  grid-template-columns: 1fr 1fr 6fr 3fr 1fr;
+  grid-template-columns: 1fr 1fr 6fr 7fr 3fr 1fr;
   align-items: center;
 }
 
@@ -445,7 +445,7 @@ a:hover {
 
 .expanded_tracks_header {
   display: grid;
-  grid-template-columns: 6fr 6fr 3fr 1fr;
+  grid-template-columns: 1fr 7fr 7fr 3fr 1fr;
 }
 
 .expanded_tracks_container .album {

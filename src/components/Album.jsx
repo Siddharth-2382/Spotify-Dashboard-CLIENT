@@ -8,6 +8,7 @@ function Album(props) {
     props.artistNames.join(", ") + " • " + props.albumName;
   return (
     <div className="album">
+      {props.expanded && <h3 className="duration">{props.index + 1}</h3>}
       <img
         className={props.coverType}
         src={props.imgSource}
@@ -29,7 +30,11 @@ function Album(props) {
       </div>
       {props.expanded && (
         <>
-          <span className="duration">{props.albumName}</span>
+          <span className="duration">
+            {props.albumName.length > 45
+              ? props.albumName.slice(0, 44) + "..."
+              : props.albumName}
+          </span>
           <span className="duration">{props.releaseDate}</span>
         </>
       )}

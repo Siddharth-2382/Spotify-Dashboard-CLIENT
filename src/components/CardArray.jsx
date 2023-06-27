@@ -19,6 +19,7 @@ function CardArray(props) {
           props.items.map((item, index) => (
             <Card
               key={index}
+              id={item.id}
               imgSource={
                 props.isTrack
                   ? item.album.images &&
@@ -27,6 +28,7 @@ function CardArray(props) {
                   : item.images && item.images.length > 0 && item.images[0].url
               }
               cardType={props.cardType}
+              arrayType={props.arrayName}
               title={item.name}
               creator={item.owner && item.owner.display_name}
               type={props.type}

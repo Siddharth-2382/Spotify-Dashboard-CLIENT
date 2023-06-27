@@ -86,8 +86,9 @@ function ExpandedView() {
           </div>
           <div className="expanded_tracks_container">
             <div className="duration expanded_tracks_header">
+              <span>#</span>
               <span>Track title</span>
-              <span>Album name</span>
+              <span style={{ paddingLeft: "16px" }}>Album name</span>
               <span>Release date</span>
               <span>Duration</span>
             </div>
@@ -100,6 +101,7 @@ function ExpandedView() {
                     track.track.album.images[0] && (
                       <Album
                         key={index}
+                        index={index}
                         imgSource={
                           track.track.album.images[0] &&
                           track.track.album.images[0].url
@@ -124,6 +126,7 @@ function ExpandedView() {
                       track.album.images[0] && (
                         <Album
                           key={index}
+                          index={index}
                           imgSource={
                             track.album.images[0] && track.album.images[0].url
                           }
