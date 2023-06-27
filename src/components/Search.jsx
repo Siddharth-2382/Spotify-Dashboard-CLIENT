@@ -16,7 +16,7 @@ function Search() {
         window.location.href.split("/")[
           window.location.href.split("/").length - 1
         ];
-      if (q) {
+      if (q && window.location.href.includes("/search/")) {
         inputRef.current.value = q;
         handleSearch({ target: { value: q } });
       }

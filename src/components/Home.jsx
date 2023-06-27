@@ -13,8 +13,8 @@ function Home() {
         <Sidebar />
         <Routes>
           <Route path="/" element={<Profile />} />
-          <Route path="/search" element={<Search />} />
-          <Route path="/search/:query" element={<Search />} />
+          <Route exact path="/search" element={<Search />} />
+          <Route exact path="/search/:query" element={<Search />} />
           <Route path="/:type/:id" element={<ExpandedView />} />
         </Routes>
         <Player />
