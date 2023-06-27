@@ -9,6 +9,8 @@ function Card(props) {
           ? `/${props.arrayType.toLowerCase()}/${props.id}`
           : props.arrayType === "Artists"
           ? `/${props.arrayType.toLowerCase()}/${props.id}`
+          : props.arrayType === "Recently Played"
+          ? `/tracks/${props.id}`
           : null
       }
     >

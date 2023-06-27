@@ -158,8 +158,8 @@ p {
   margin-bottom: 32px;
 }
 
-.toat_header + div > div {
-  margin-bottom: 32px;
+.toat_header + div > a > div {
+  padding: 16px 0;
 }
 
 /* Sidebar */
@@ -261,10 +261,12 @@ a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 6fr 7fr 3fr 1fr;
   align-items: center;
+  transition: all 0.25s cubic-bezier(0.3, 0, 0.4, 1);
 }
 
 .album:hover {
   cursor: pointer;
+  background-color: #282828;
 }
 
 .album > div {
@@ -451,6 +453,7 @@ a:hover {
 
 .expanded_tracks_container .album {
   margin-bottom: 16px;
+  padding-left: 8px;
 }
 
 /* CSS for Tablet */

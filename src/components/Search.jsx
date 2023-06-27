@@ -104,12 +104,12 @@ function Search() {
       <div ref={searchDivRef} className="search_content">
         {!(albums && playlists && artists && tracks && episodes && shows) && (
           <>
-            <h2>Recently Played</h2>
             {loading ? (
               <Spinner />
             ) : (
               <CardArray
                 cardType={"playable"}
+                arrayName={"Recently Played"}
                 items={fetchItems(recentlyPlayed && recentlyPlayed.items)}
                 isTrack={true}
               />

@@ -3,6 +3,7 @@ import Button from "./Button";
 import { getUserInfo } from "../spotify";
 import { catchErrors } from "../utils";
 import Album from "./Album";
+import { Link } from "react-router-dom";
 
 function TopOfAllTime(props) {
   const [topTracks, setTopTracks] = useState();
@@ -38,12 +39,13 @@ function TopOfAllTime(props) {
           {topArtists &&
             topArtists.items.map((artist, index) => {
               return (
-                <Album
-                  key={index}
-                  imgSource={artist.images[0] && artist.images[0].url}
-                  coverType={"artist_cover"}
-                  trackName={artist.name}
-                />
+                <Link to={`/artists/${artist.id}`} key={index}>
+                  <Album
+                    imgSource={artist.images[0] && artist.images[0].url}
+                    coverType={"artist_cover"}
+                    trackName={artist.name}
+                  />
+                </Link>
               );
             })}
         </div>
@@ -58,17 +60,18 @@ function TopOfAllTime(props) {
             topTracks.items.map((track, index) => {
               return (
                 track.album.images[0] && (
-                  <Album
-                    key={index}
-                    imgSource={
-                      track.album.images[0] && track.album.images[0].url
-                    }
-                    coverType={"album_cover"}
-                    trackName={track.name}
-                    albumName={track.album.name}
-                    artistNames={fetchArtistArray(track.artists)}
-                    trackDuration={track.duration_ms}
-                  />
+                  <Link to={`/tracks/${track.id}`} key={index}>
+                    <Album
+                      imgSource={
+                        track.album.images[0] && track.album.images[0].url
+                      }
+                      coverType={"album_cover"}
+                      trackName={track.name}
+                      albumName={track.album.name}
+                      artistNames={fetchArtistArray(track.artists)}
+                      trackDuration={track.duration_ms}
+                    />
+                  </Link>
                 )
               );
             })}
