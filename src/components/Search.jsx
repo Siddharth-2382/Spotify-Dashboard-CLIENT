@@ -10,6 +10,20 @@ function Search() {
   const inputRef = useRef();
   const searchDivRef = useRef();
 
+  useEffect(() => {
+    function handleSearchWithURL() {
+      const q =
+        window.location.href.split("/")[
+          window.location.href.split("/").length - 1
+        ];
+      if (q) {
+        inputRef.current.value = q;
+        handleSearch({ target: { value: q } });
+      }
+    }
+    handleSearchWithURL();
+  }, []);
+
   const searchClick = () => {
     inputRef.current.focus();
   };

@@ -14,6 +14,7 @@ function Home() {
         <Routes>
           <Route path="/" element={<Profile />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/search/:query" element={<Search />} />
           <Route path="/:type/:id" element={<ExpandedView />} />
         </Routes>
         <Player />
