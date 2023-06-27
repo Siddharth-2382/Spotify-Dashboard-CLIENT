@@ -19,13 +19,10 @@ function ExpandedInfo(props) {
         {props.name}
       </div>
       <h5>
-        {props.type === "playlist"
-          ? props.createdBy +
-            " • " +
-            props.likes +
-            " likes • " +
-            props.totalTracks +
-            " songs"
+        {props.type !== "artist"
+          ? props.type === "playlist"
+            ? `${props.createdBy} • ${props.likes} likes • ${props.totalTracks} songs`
+            : "By " + (props.createdBy && props.createdBy[0].name)
           : "Genres • " + (props.genres ? props.genres.join(", ") : "")}
       </h5>
     </div>

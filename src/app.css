@@ -417,7 +417,8 @@ a:hover {
   align-items: flex-end;
 }
 
-.playlists_img {
+.playlists_img,
+.tracks_img {
   width: 232px;
   height: 232px;
   min-height: 232px;
