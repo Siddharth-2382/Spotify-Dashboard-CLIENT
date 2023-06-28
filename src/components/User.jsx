@@ -10,15 +10,6 @@ const profileStyle = {
   width: "150px",
 };
 
-const usernameStyle = {
-  margin: "auto",
-  width: "fit-content",
-  fontSize: "55px",
-  fontWeight: "800",
-  color: "#ffffff",
-  transition: "all 0.25s cubic-bezier(0.3, 0, 0.4, 1)",
-};
-
 function User() {
   const [user, setUser] = useState(null);
   const [followedArtists, setFollowedArtists] = useState(null);
@@ -41,39 +32,19 @@ function User() {
   }, [user, followedArtists, playlists]);
 
   const [loading, setLoading] = useState(true);
-  const [isHeadingHovered, setIsHeadingHovered] = useState(false);
-
-  const handleHeadingMouseOver = () => {
-    setIsHeadingHovered(true);
-  };
-
-  const handleHeadingMouseOut = () => {
-    setIsHeadingHovered(false);
-  };
-
-  const headingStyleWithHover = {
-    ...usernameStyle,
-    color: isHeadingHovered ? "#1ED760" : usernameStyle.color,
-  };
 
   return (
     <>
       {loading ? (
         <Spinner />
       ) : (
-        <div style={{ textAlign: "center", paddingTop: "50px" }}>
+        <div style={{ textAlign: "center", paddingTop: "32px" }}>
           <img
             style={profileStyle}
             src={user && user.images[0].url}
             alt="user's profile"
           />
-          <h1
-            style={isHeadingHovered ? headingStyleWithHover : usernameStyle}
-            onMouseOver={handleHeadingMouseOver}
-            onMouseOut={handleHeadingMouseOut}
-          >
-            {user && user.display_name}
-          </h1>
+          <h1 className="username">{user && user.display_name}</h1>
           <div
             style={{
               display: "flex",

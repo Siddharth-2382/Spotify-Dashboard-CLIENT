@@ -5,8 +5,6 @@ import {
   faHouse,
   faMagnifyingGlass,
   faBars,
-  faPlus,
-  faArrowRightLong,
 } from "@fortawesome/free-solid-svg-icons";
 import Playlist from "./Playlist";
 import { getUserInfo } from "../spotify";
@@ -43,18 +41,12 @@ function Sidebar() {
       </div>
       <div className="library">
         <div className="library_container">
-          <a className="user_library" href="/">
+          <Link className="user_library" to="">
             <span>
               <FontAwesomeIcon icon={faBars} rotation={90} />
             </span>
             Library
-          </a>
-          <a href="/">
-            <FontAwesomeIcon icon={faPlus} />
-          </a>
-          <a href="/">
-            <FontAwesomeIcon icon={faArrowRightLong} />
-          </a>
+          </Link>
         </div>
         <div className="playlist_container">
           {playlists &&

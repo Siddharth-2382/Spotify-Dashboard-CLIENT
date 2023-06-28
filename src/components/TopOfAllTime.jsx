@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Button from "./Button";
 import { getUserInfo } from "../spotify";
 import { catchErrors } from "../utils";
 import Album from "./Album";
@@ -18,8 +17,6 @@ function TopOfAllTime(props) {
     catchErrors(fetchData());
   }, []);
 
-  function handleClick() {}
-
   const fetchArtistArray = (artistArray) => {
     const artistNames = [];
     artistArray.forEach((artist) => {
@@ -33,7 +30,6 @@ function TopOfAllTime(props) {
       <div>
         <div className="toat_header">
           <h3>Top Artists of All Time</h3>
-          <Button buttonName={"see more"} handleClick={handleClick} />
         </div>
         <div>
           {topArtists &&
@@ -53,7 +49,6 @@ function TopOfAllTime(props) {
       <div>
         <div className="toat_header">
           <h3>Top Tracks of All Time</h3>
-          <Button buttonName={"see more"} handleClick={handleClick} />
         </div>
         <div>
           {topTracks &&

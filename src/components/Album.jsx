@@ -15,30 +15,20 @@ function Album(props) {
         alt="Album cover"
       />
       <div>
-        <h5>
-          {props.trackName && props.trackName.length > 36
-            ? props.trackName.slice(0, 36) + "..."
-            : props.trackName}
-        </h5>
+        <h5>{props.trackName}</h5>
         <p>
           {albumDesc
-            ? albumDesc && albumDesc.length > 49
-              ? albumDesc.slice(0, 49) + "..."
-              : albumDesc
+            ? albumDesc
             : props.artistNames && props.artistNames.join(", ")}
         </p>
       </div>
       {props.expanded && (
         <>
-          <span className="duration">
-            {props.albumName.length > 45
-              ? props.albumName.slice(0, 44) + "..."
-              : props.albumName}
-          </span>
+          <span className="duration">{props.albumName}</span>
           <span className="duration">{props.releaseDate}</span>
         </>
       )}
-      <span className="duration">
+      <span className="duration track_time">
         {props.trackDuration && formatDuration(props.trackDuration)}
       </span>
     </div>
