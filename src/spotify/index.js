@@ -25,7 +25,7 @@ const refreshAccessToken = async () => {
     const { data } = await axios.get(
       `${
         process.env.REACT_APP_BACKEND_URI
-      }/refresh_token?refresh_token=${getLocalRefreshToken()}`
+      }refresh_token?refresh_token=${getLocalRefreshToken()}`
     );
     const { access_token } = data;
     setLocalAccessToken(access_token);
