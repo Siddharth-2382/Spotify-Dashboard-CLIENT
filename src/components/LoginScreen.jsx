@@ -1,7 +1,7 @@
 import React from "react";
 
 function LoginScreen() {
-  const BACKEND_URI = "http://spotify-dashboard-server.vercel.app/login";
+  const BACKEND_URI = "https://spotify-dashboard-server.vercel.app/login";
   return (
     <div className="login_screen">
       <div>
