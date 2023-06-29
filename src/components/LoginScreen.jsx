@@ -9,7 +9,7 @@ function LoginScreen() {
 
       <a
         className="login_button"
-        href={`${process.env.REACT_APP_BACKEND_URI}/login`}
+        href={`${process.env.REACT_APP_BACKEND_URI}login`}
       >
         Log in to Spotify
       </a>
