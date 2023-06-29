@@ -1,71 +1,49 @@
-# Getting Started with Create React App
+# Spotify Dashboard Client
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Spotify Dashboard CLIENT is a React-based client-side application that provides a user dashboard experience for Spotify. It allows users to explore their top tracks, artists, playlists, and more, with features inspired by the official Spotify web application.
 
-## Available Scripts
+This application relies on a backend server for fetching data from the Spotify API. The backend server is expected to be running at the URI specified in the `.env` file.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- View your top tracks, artists, and playlists on Spotify.
+- Search for tracks, artists, and playlists.
+- Discover new releases and browse different genres.
+- View tracks, artists and playlists with details.
+- And more...
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Before running the Spotify Dashboard CLIENT, ensure that you need to set up and run the backend server for fetching data from the Spotify API. For information on how to setup a local server, go to:
+[Spotify-Dashboard-SERVER](https://github.com/Siddharth-2382/Spotify-Dashboard-SERVER#readme)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+        git clone https://github.com/Siddharth-2382/Spotify-Dashboard-CLIENT.git
+2. Navigate to the project directory:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+        cd Spotify-Dashboard-CLIENT
+3. Install the dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+        npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Configuration
 
-### `npm run eject`
+The Spotify Dashboard CLIENT requires a backend server to fetch data from the Spotify API. To configure the backend URI, create a `.env` file in the project root directory and add the following line:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+        REACT_APP_BACKEND_URI=http://localhost:8888/
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Replace `http://localhost:8888/` with the actual URI of your backend server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Running the Application
+To start the application, use the following command:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+        npm start
 
-## Learn More
+This will start the development server and launch the application in your default web browser. The application should automatically reload if you make any changes to the source code.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Mockup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# Spotify-Dashboard-CLIENT
+![Spotify Metrics](https://github.com/Siddharth-2382/Spotify-Dashboard-CLIENT/assets/94699055/8b3db128-ba11-43bf-9b66-e2b71518d681)
