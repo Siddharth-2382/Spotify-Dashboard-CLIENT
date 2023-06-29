@@ -23,7 +23,9 @@ const getLocalRefreshToken = () =>
 const refreshAccessToken = async () => {
   try {
     const { data } = await axios.get(
-      `https://spotify-dashboard-server.vercel.app/refresh_token?refresh_token=${getLocalRefreshToken()}`
+      `${
+        process.env.REACT_APP_BACKEND_URI
+      }/refresh_token?refresh_token=${getLocalRefreshToken()}`
     );
     const { access_token } = data;
     setLocalAccessToken(access_token);

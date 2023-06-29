@@ -1,14 +1,16 @@
 import React from "react";
 
 function LoginScreen() {
-  const BACKEND_URI = "https://spotify-dashboard-server.vercel.app/login";
   return (
     <div className="login_screen">
       <div>
         <h1>Spotify Profile</h1>
       </div>
 
-      <a className="login_button" href={BACKEND_URI}>
+      <a
+        className="login_button"
+        href={`${process.env.REACT_APP_BACKEND_URI}/login`}
+      >
         Log in to Spotify
       </a>
     </div>
