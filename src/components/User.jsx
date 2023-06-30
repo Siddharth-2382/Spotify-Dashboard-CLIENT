@@ -4,6 +4,7 @@ import Stats from "./Stats";
 import { getUserInfo, logout } from "../spotify";
 import { catchErrors } from "../utils";
 import Button from "./Button";
+import anonymous from "./images/anonymous.png";
 
 const profileStyle = {
   borderRadius: "50%",
@@ -41,7 +42,7 @@ function User() {
         <div style={{ textAlign: "center", paddingTop: "32px" }}>
           <img
             style={profileStyle}
-            src={user && user.images[0].url}
+            src={user && user.images[0] ? user.images[0].url : anonymous}
             alt="user's profile"
           />
           <h1 className="username">{user && user.display_name}</h1>
